@@ -13,15 +13,26 @@ const App = () => {
   useEffect(() => {
     // we have to call alanBtn function and pass few things
     // first is a key
+    // this is a way to call api using async await
+    const request = async () => {
+      const response = await fetch(
+        "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=902e40f921eb42dba20d0ecf5d5711b1"
+      );
+      const json = await response.json();
+      const { articles } = json;
+      console.log(articles[0].description);
+    };
+    request();
     alanBtn({
       key: alanKey,
       //   we can make alan listen to commands, as many commands as we want
-      onCommand: ({ command }) => {
+      onCommand: ({ command, articles }) => {
         // actually we are destructuring because we will receive it as an object
         // we can use if statements as well as switch case
-        if (command === "testCommand") {
+        if (command === "newHeadlines") {
           // we have to write the command: testCommand in the alan studio
-          alert("this command was executed");
+
+          console.log(articles);
         }
       },
     });
