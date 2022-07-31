@@ -1,13 +1,21 @@
+#root,
+html,
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* we want the height of our application to be the full height of our screen */
+  height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  background-color: cornflowerblue;
+}
+
+* {
+  /* the full width and height remains exactly how it is specified, no matter what! */
+  /* it is more intuitive */
+  box-sizing: border-box;
+}
+html {
+  /* we want the scroll animation to be smooth */
+  scroll-behavior: smooth;
 }
