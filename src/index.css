@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Ubuntu+Mono:wght@400;700&display=swap");
 #root,
 html,
 body {
@@ -7,7 +8,6 @@ body {
 
 body {
   margin: 0;
-  background-color: cornflowerblue;
 }
 
 * {
@@ -18,4 +18,57 @@ body {
 html {
   /* we want the scroll animation to be smooth */
   scroll-behavior: smooth;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Roboto", sans-serif;
+  flex-direction: column;
+  padding: 30px;
+}
+.grid-main {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+}
+.grid-child {
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 10px;
+}
+.news-img {
+  width: 100%;
+}
+.news-title {
+  font-size: 25px;
+  font-weight: 600;
+}
+.news-content {
+  font-size: 16px;
+}
+.news-author {
+  font-size: 14px;
+}
+.news-date {
+  font-size: 14px;
+}
+.space-btw {
+  display: flex;
+  justify-content: space-between;
+}
+.select {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+}
+.select-box {
+  width: 200px;
+  height: 40px;
+  border: 1px solid #e0e0e0;
+  outline: none;
+  padding: 10px;
 }
